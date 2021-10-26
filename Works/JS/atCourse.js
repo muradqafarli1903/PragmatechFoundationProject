@@ -16,7 +16,7 @@ if (typeof(a)=='string'){
     console.log(netice,netice2)
 
 }
-    else if (typeof(a)==Number){
+    else if (typeof(a)=='number'){
         
     let netice=kvadrat(a)
     console.log(netice)
