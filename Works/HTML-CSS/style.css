@@ -1,0 +1,33 @@
+div{
+    width: 400px;
+    height: 380px;
+    display: inline-block;
+    margin: 40px;
+}
+
+.Bigbox{
+    background: peachpuff;
+    width: 365px;
+    height: 349px;
+    font-size: 30px;  
+    margin-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline-block; 
+
+}
+.yuxari{
+    background: peachpuff;
+    width: 160px;
+    height: 175px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.asagi{
+    background: peachpuff;
+    width: 160px;
+    height: 175px;
+    margin-left: 20px;
+    margin-top: 40px;
+    display: inline-block;
+
+}
