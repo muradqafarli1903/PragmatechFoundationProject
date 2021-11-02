@@ -5,3 +5,4 @@
 <img>- sekili teyin edir, istifadesi: <img src='sekilin adresi'>
 <p>- abzaslari teyin edir.
 <titles>- comment verir
+justify-content- div'lerin yerlerini secmek ucun. mes; justify-content center- div'leri merkezlesdirir
