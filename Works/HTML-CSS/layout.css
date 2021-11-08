@@ -25,11 +25,13 @@
 }
 
 .col-2 {
-    width: calc((100%/12)*2)
+    width: calc((100%/12)*2);
+    
 }
 
 .col-3 {
-    width: calc((100%/12)*3)
+    width: calc((100%/12)*3);
+    
 }
 
 .col-4 {
@@ -45,7 +47,8 @@
 }
 
 .col-7 {
-    width: calc((100%/12)*7)
+    width: calc((100%/12)*7);
+    
 }
 
 .col-8 {

@@ -1,40 +1,81 @@
-#navbar{
-    width: 100%;
-    margin: 0px auto;
-    background: black;
+#header{
     
-    color: white;
+    display:flex;
+    padding: 15px;
+    justify-content: space-between;
+    
 }
-.navbar-container{
+body{
+    background:#222222;
+    margin: 0px;
+}
+.background-logo{
+    background: #007ced;;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-weight: bold;
+    margin-right: 9px;
+
+    margin-left: 9px;
+
+    margin-bottom: 15px;
+
+    margin-top: 15px;
+
+}
+.background-logo a {
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 15px;
+    
+    
+}
+.ad-soyad{
+    color: white;
+    height: 30px;
+    margin-top: 14px;
+    
+
+}
+.ad-soyad p{
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em;
+    
+}
+div{
     display: flex;
     justify-content: space-between;
 }
-.navbar-container ul{
-    display: flex;
-    
-    
-}
-.navbar-container ul li{
-    margin: 0px 20px;
-}
-body{
-    margin: 0px;
-}
-.search{
-    margin: 10px 40px;
-    display: flex;
-}
-.navbar-container ul li a{
+.navbar{
     color: white;
-}
-.navbar-container ul li a:hover{
-    color:yellow
-}
-.navbar-container ul li:hover{
-    color: violet;
-}
-ul {
+    display: flex;
     list-style-type: none;
-   }
-  
+    
+}
+.navbar li{
+    margin: 14px;
+    font-size: 0.6em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.navbar li a{
+    text-decoration: none;
+    color: #d5d5d5;
+}
+.navbar li  :hover{
+    color: white;
+    
+    
+}
+
 
