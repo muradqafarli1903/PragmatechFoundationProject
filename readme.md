@@ -7,3 +7,5 @@
 <titles>- comment verir
 justify-content- div'lerin yerlerini secmek ucun. mes; justify-content center- div'leri merkezlesdirir
 range(start, stop, step)
+<ul style="list-style: none;">- li'lerin noqtelerini yigisdirmaq ucun
+
