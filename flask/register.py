@@ -1,77 +1,80 @@
 users=[]
 simvollar=['\?','\+','\*','\!','\%']
 
+
 import re
 import time
 regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-class register:
-    def __init__(self,_ad,_soyad,_password,_mail,_nomre):
-        self.ad=_ad
-        self.soyad=_soyad
-        self.password=_password
-        self.mail=_mail
-        self.nomre=_nomre
+class Register:
+    def __init__(self,ad='murad',soyad='qafarli',password='Besiktas1903*',mail='muradq469@gmail.com',nomre='8808699',operator='50'):
+        self.ad=ad
+        self.soyad=soyad
+        self.password=password
+        self.mail=mail
+        self.nomre=nomre
+        self.operator=operator
         users.append(self)
-    def qeydiyyat():
-        global ad,soyad,mail,password,nomre,operator
+    def qeydiyyat(self):
+        
         print('zehmet olmasa asagidaki xanalari doldurun...')
-        ad=input('Adiniz:(doldurulmasi zeruridir) ')
-        soyad=input('Soyadiniz:(doldurulmasi zeruridir) ')
-        mail=input('mail: ')
-        operator=input('Prefiks: Nar: 70 ve ya 77, Azercell: 50,Bakcell: 55 ve ya 99 ')
-        nomre=input('Nomre: +994 {}'.format(operator))
-        password=input("sifre: (doldurulmasi zeruridir) ")
+        self.ad=input('Adiniz:(doldurulmasi zeruridir) ')
+        self.soyad=input('Soyadiniz:(doldurulmasi zeruridir) ')
+        self.mail=input('mail: ')
+        self.operator=input('Prefiks: Nar: 70 ve ya 77, Azercell: 50,Bakcell: 55 ve ya 99 ')
+        self.nomre=input('Nomre: +994 {}'.format(self.operator))
+        self.password=input("sifre: (doldurulmasi zeruridir) ")
     
-    def adYoxlama():
+    def adYoxlama(self):
+        
         
         while True:
-            if ad==" ":
+            if self.ad==" ":
                 print('adinizi daxil edin')
-                ad=input('Adiniz:(doldurulmasi zeruridir) ')
+                self.ad=input('Adiniz:(doldurulmasi zeruridir) ')
             else:
                 break
-    def soyadYoxlama():
+    def soyadYoxlama(self):
         
         while True:
-            if soyad==" ":
+            if self.soyad==" ":
                 print('soyadinizi daxil edin')
-                soyad=input('Soyadiniz:(doldurulmasi zeruridir) ')
+                self.soyad=input('Soyadiniz:(doldurulmasi zeruridir) ')
             else:
                 break
-    def nomreYoxlama():
+    def nomreYoxlama(self):
         
     
         while True:
-            if len(nomre)!=7:
-                nomre=input('duzgun nomre daxil edin: +994 {}'.format(operator))
+            if len(self.nomre)!=7:
+                self.nomre=input('duzgun nomre daxil edin: +994 {}'.format(self.operator))
             
             
             else:
                 break
             try:
-                nomre=int(nomre)
+                self.nomre=int(self.nomre)
             except:
-                nomre=input('nomre simvol qebul ede bilmez, yeniden cehd edin: +994 {}'.format(operator))
-    def mailYoxlama():
+                self.nomre=input('nomre simvol qebul ede bilmez, yeniden cehd edin: +994 {}'.format(self.operator))
+    def mailYoxlama(self):
         
     
         while True:
-            if (re.fullmatch(regex,mail)):
+            if (re.fullmatch(regex,self.mail)):
                 print('mail duzgundur. ')
                 break
             else:
-                mail=input('Mail yanlisdir, yeniden cehd edin')
-    def sifreYoxlama():
+                self.mail=input('Mail yanlisdir, yeniden cehd edin')
+    def sifreYoxlama(self):
         
-        if len(password)<8:
+        if len(self.password)<8:
             raise Exception('Sifre en az 8 simvol olmalidir')
-        elif not re.search('[a-z]',password):
+        elif not re.search('[a-z]',self.password):
             raise Exception('sifrede en az bir kicik herf olmalidir')
-        elif not re.search('[A-Z]',password):
+        elif not re.search('[A-Z]',self.password):
             raise Exception('sifrede en az 1 boyuk herf olmalidir')
-        elif not re.search('[0-9]',password):
+        elif not re.search('[0-9]',self.password):
             raise Exception('sifrede en az reqem olmalidir')
-        elif not re.search(str(simvollar),password):
+        elif not re.search(str(simvollar),self.password):
             raise Exception('Sifrede en az bir simvol olmalidir: * % + ? !')
         else:
             print('Sifre yoxlanilir...')
@@ -82,17 +85,14 @@ class register:
                 pass
             except Exception as xeta:
                 print(xeta)
-while True:
-    answer=input('qeydiyyat: Y/N')
-    if answer== 'Y':
-
-        register.qeydiyyat()
-        register.adYoxlama()
-        register.soyadYoxlama()
-        register.mailYoxlama()
-        register.nomreYoxlama()
-
-        register.sifreYoxlama()
-        print(users)
-    else:
-        break
+answer=input('istifadeci girisi: Y/N ')
+while answer=='Y':
+    show=Register()
+    show.qeydiyyat()
+    show.adYoxlama()
+    show.soyadYoxlama()
+    show.mailYoxlama()
+    show.nomreYoxlama()
+    show.sifreYoxlama()
+else:
+    print('error')
